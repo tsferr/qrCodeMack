@@ -1,26 +1,21 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## How to run this project
 
-## How to use this template
+*Install NodeJs version 7.9.0
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+### After install Nodejs:
 
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+You need install Ionic and project dependencies:
 
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
+$ npm install -g ionic cordova
 ```
 
-Then, to run it, cd into `mySideMenu` and run:
+Then, to run it, cd into `qrCodeMack` and run:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ npm install
+$ ionic serve
 ```
 
-Substitute ios for android if not on a Mac.
-
+Add --lab to ionic serve to run in browser and emulate all platforms
