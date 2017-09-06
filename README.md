@@ -1,6 +1,6 @@
 ## How to run this project
 
-*Install NodeJs version 7.9.0
+*Install NodeJs version 7.9.0*.
 
 
 ### After install Nodejs:
