@@ -1,0 +1,37 @@
+photo 
+
+{
+    _id:
+    party:
+    created_at:
+    created_user:
+    url:
+    isActive:
+}
+
+party
+
+{
+    _id: alisdiausdiuadialsduaild
+    date_start:
+    date_end:
+    user:
+    name:
+    banner:
+    photos: [
+        photo
+    ]
+}
+
+user
+
+{
+    _id:
+    name:
+    tel:
+    email:
+    avatar:
+    facebook_auth:
+}
+
+
