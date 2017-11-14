@@ -6,6 +6,11 @@
   </ion-header>
 
   <ion-content>
+    
+    <div class="profile-avatar" padding>
+      <img class="img-circle" src="http://tudoela.com/wp-content/uploads/2016/09/cleo-pires-cabelo-ondulado.jpg" />
+    </div>
+
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}

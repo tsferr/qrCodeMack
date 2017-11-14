@@ -1,46 +1,44 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { Component, ViewChild } from '@angular/core'
+import { Nav, Platform } from 'ionic-angular'
+import { StatusBar } from '@ionic-native/status-bar'
+import { SplashScreen } from '@ionic-native/splash-screen'
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { ListPage } from '../pages/list/list'
+import { AboutUsPage } from '../pages/about-us/about-us'
+import { ProfilePage } from '../pages/profile/profile'
+import { RegisterPartyPage } from '../pages/register-party/register-party'
 
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
-  @ViewChild(Nav) nav: Nav;
+  @ViewChild(Nav) nav: Nav
 
-  rootPage: any = HomePage;
+  rootPage: any = ListPage
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any}>
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+    this.initializeApp()
 
-    // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Festas', component: ListPage },
-      { title: 'Perfil', component: HomePage },
-      { title: 'Estou em uma festa', component: HomePage },
-      { title: 'Sobre nós', component: ListPage }
-    ];
+      { title: 'Cheguei na festa', component: RegisterPartyPage },
+      { title: 'Perfil', component: ProfilePage },
+      { title: 'Sobre nós', component: AboutUsPage }
+    ]
 
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+    this.platform.ready().then(() => {  
+      this.statusBar.styleDefault()
+      this.splashScreen.hide()
     });
   }
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.push(page.component)
   }
 }
